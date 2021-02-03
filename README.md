@@ -1,11 +1,29 @@
-# Example
+# Hello World via DropWizard
 
 How to start the Hello World application
 ---
 
-1. Run `mvn clean package` or `gradle clean package` to build your application
+1. Run `mvn clean package` or `./gradlew build` to build your application
 1. Start application with `java -jar target/dwhello-1.0-SNAPSHOT.jar server hello-world.yml`
 1. To check that your application is running enter url `http://localhost:8080/hello-world`
+
+Trying It Out
+---
+
+`$ curl http://localhost:8080/hello-world`
+
+Will output:
+`Hello! How are you today?`
+
+`$ curl "http://localhost:8080/hello-world/format?reverse=true"`
+
+Will output:
+`?yadot uoy era woH !olleH`
+
+`$ curl http://localhost:8080/hello-world/format`
+
+Will output:
+`Hello! How are you today?`
 
 Health Check
 ---
@@ -29,5 +47,13 @@ You can run the tests via maven or gradle
 
 or
 
-`gradle clean test`
+`./gradlew test`
+
+Notes
+---
+Please note that the Saying and SayingResource classes are just part of the boilerplate init and there for reference.
+
+TODO
+---
+Add Drop Wizard Resource Testing through a Jetty Client Testing to Spock Tests
 
