@@ -1,0 +1,7 @@
+logging:
+  level: INFO
+  loggers:
+    com.redbard: DEBUG
+template: Hello, %s!
+defaultName: Stranger
+helloWorld: Hello! How are you today?
