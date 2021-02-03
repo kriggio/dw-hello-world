@@ -35,7 +35,7 @@ Using Docker
 You can run locally via Docker by running the following commands after packaging the project via maven or gradle.
 
 
-`$ docker build -t dw-hello-world`
+`$ docker build -t dw-hello-world .`
 
 `$ docker run -p 8080:8080 -ti --rm dw-hello-world`
 
