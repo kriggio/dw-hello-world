@@ -6,6 +6,3 @@ COPY hello-world.yml /hello-world.yml
 # run application with this command line 
 ENTRYPOINT [ "/usr/bin/java" ]
 CMD ["-jar", "/app.jar", "server", "/hello-world.yml"]
-
-# docker build -t dw-hello-world .
-# docker run -p 8080:8080 -ti --rm dw-hello-world
