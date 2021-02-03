@@ -3,8 +3,8 @@
 How to start the Hello World application
 ---
 
-1. Run `mvn clean package` or `./gradlew build` to build your application
-1. Start application with `java -jar target/dwhello-1.0-SNAPSHOT.jar server hello-world.yml`
+1. Run `mvn clean package` or `gradle jar` to build your application
+1. Start application with `java -jar target/dwhello-1.0-SNAPSHOT.jar server hello-world.yml` for Maven or `java -jar build/libs/dwhello-1.0-SNAPSHOT.jar server hello-world.yml` for gradle
 1. To check that your application is running enter url `http://localhost:8080/hello-world`
 
 Trying It Out
@@ -32,8 +32,7 @@ To see your applications health enter url `http://localhost:8081/healthcheck`
 
 Using Docker
 ---
-You can run locally via Docker by running the following commands after packaging the project via maven or gradle.
-
+You can run locally via Docker by running the following commands after packaging the project via maven (`mvn package`, though you will have to update the Dockerfile to get this to grab the correct jar now) or gradle (`gradle jar`).
 
 `$ docker build -t dw-hello-world .`
 
@@ -47,7 +46,7 @@ You can run the tests via maven or gradle
 
 or
 
-`./gradlew test`
+`gradle clean test`
 
 Notes
 ---
