@@ -16,9 +16,10 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.dropwizard:dropwizard-core:2.0.0'
-    testImplementation 'org.spockframework:spock-core:1.0-groovy-2.4'
-    testImplementation 'org.codehaus.groovy:groovy-all:2.4.7'
+    implementation "io.dropwizard:dropwizard-core:2.0.0"
+    compile "org.codehaus.groovy:groovy:3.0.7"
+    testCompile "org.spockframework:spock-core"
+    testCompile platform("org.spockframework:spock-bom:2.0-M4-groovy-3.0")
 }
 
 group = 'com.redbard'
@@ -41,4 +42,12 @@ publishing {
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
+}
+
+
+test {
+  useJUnitPlatform()
+  testLogging {
+    events "passed", "skipped", "failed"
+  }
 }
