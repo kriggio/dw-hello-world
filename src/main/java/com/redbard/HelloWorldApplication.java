@@ -21,7 +21,6 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
 
     @Override
     public void initialize(final Bootstrap<HelloWorldConfiguration> bootstrap) {
-        // TODO: application initialization
     }
 
     @Override

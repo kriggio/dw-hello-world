@@ -1,7 +1,5 @@
 package com.redbard.resources;
 
-import java.util.Optional;
-
 import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

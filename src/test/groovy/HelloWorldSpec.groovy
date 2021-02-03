@@ -11,16 +11,19 @@ class HelloWorldSpec extends Specification {
 	
 
 	def "helloWorld() should equal helloWorld"() {
+		given: "The HelloWorldResource is constructed with HELLO_WORLD"
 		expect:
 		HELLO_WORLD == helloWorldResource.helloWorld()
 	}
 	
 	def "helloWorldFormat(true) should equal helloWorldReversed"() {
+		given: "The HelloWorldResource is constructed with HELLO_WORLD"
 		expect:
 		HELLO_WORLD_REVERSED == helloWorldResource.helloWorldFormat(true)
 	}
 	
 	def "helloWorldFormat(false) should equal helloWorld"() {
+		given: "The HelloWorldResource is constructed with HELLO_WORLD"
 		expect:
 		HELLO_WORLD == helloWorldResource.helloWorldFormat(false)
 	}

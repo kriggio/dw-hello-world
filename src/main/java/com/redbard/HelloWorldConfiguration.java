@@ -2,11 +2,6 @@ package com.redbard;
 
 import io.dropwizard.Configuration;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.hibernate.validator.constraints.*;
-import javax.validation.constraints.*;
-
-import io.dropwizard.Configuration;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.validation.constraints.NotEmpty;
 
 public class HelloWorldConfiguration extends Configuration {
