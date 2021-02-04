@@ -6,7 +6,7 @@ plugins {
     id 'java'
     id 'groovy'
     id 'maven-publish'
-    id "org.sonarqube" version "3.0"
+    id "org.sonarqube" version "3.1.1"
 }
 
 repositories {
@@ -66,7 +66,7 @@ test {
 sonarqube {
     properties {
         property 'sonar.projectName', 'DropWizard Hello World'
-        property 'sonar.projectKey', 'kriggio_scim-service'
+        property 'sonar.projectKey', 'kriggio_dwhelloworld'
         property 'sonar.organization', 'kriggio'
         property 'sonar.host.url', 'https://sonarcloud.io'
         property 'sonar.login', 'f49042195e87f760514893b18add2cebc930c94b'

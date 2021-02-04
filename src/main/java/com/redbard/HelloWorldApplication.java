@@ -21,6 +21,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
 
     @Override
     public void initialize(final Bootstrap<HelloWorldConfiguration> bootstrap) {
+    	// Placeholder for future use:wq
     }
 
     @Override
