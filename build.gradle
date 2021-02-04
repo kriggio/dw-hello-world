@@ -6,6 +6,7 @@ plugins {
     id 'java'
     id 'groovy'
     id 'maven-publish'
+    id "org.sonarqube" version "3.0"
 }
 
 repositories {
@@ -56,8 +57,18 @@ jar {
 
 
 test {
-  useJUnitPlatform()
-  testLogging {
-    events "passed", "skipped", "failed"
-  }
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+sonarqube {
+    properties {
+        property 'sonar.projectName', 'DropWizard Hello World'
+        property 'sonar.projectKey', 'kriggio_scim-service'
+        property 'sonar.organization', 'kriggio'
+        property 'sonar.host.url', 'https://sonarcloud.io'
+        property 'sonar.login', 'f49042195e87f760514893b18add2cebc930c94b'
+    }
 }
