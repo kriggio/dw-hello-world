@@ -77,9 +77,6 @@ sonarqube {
         property "sonar.groovy.jacoco.reportPath", "${buildDir}/jacoco/test.exec"
         property "sonar.jacoco.coverage.reportPaths", "$buildDir/reports/jacoco/test/jacocoTestReport.xml"
         property "sonar.junit.reportsPaths", "$buildDir/test-results/"
-        //property "sonar.binaries", "${project.buildDir.name}${File.separator}classes"
-        //property "sonar.groovy.binaries", "${project.buildDir}/classes"
-        //property "sonar.coverage.jacoco.xmlReportPaths", "$buildDir"
     }
     //dependsOn jacocoTestReport
 }
